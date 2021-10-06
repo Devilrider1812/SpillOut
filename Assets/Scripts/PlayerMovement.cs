@@ -98,7 +98,7 @@ public class Playerlvl : MonoBehaviour
 
         if (other.gameObject.tag == "levelpass")
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(1);
         }
     }
 
@@ -137,7 +137,7 @@ public class Playerlvl : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     public void ExitGame()
