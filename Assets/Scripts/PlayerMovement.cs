@@ -90,16 +90,16 @@ public class Playerlvl : MonoBehaviour
             refill.transform.localScale -= new Vector3(0, 0.05f, 0);
             SoundController.soundctrl.playClip(obst);
         }
-
+        if (other.gameObject.tag == "levelpass")
+        {
+            SceneManager.LoadScene("Level2");
+        }
         if (other.gameObject.tag == "GameOver")
         {
             GOpanel.SetActive(true);
         }
 
-        if (other.gameObject.tag == "levelpass")
-        {
-            SceneManager.LoadScene("Level2");
-        }
+    
     }
 
     public void OpenPanel()
@@ -137,11 +137,11 @@ public class Playerlvl : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Level1");
     }
 
     public void ExitGame()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Menu");
     }
 }
